@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  api:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - JWT_SECRET_KEY=sua-chave-secreta-muito-segura-para-producao
+    volumes:
+      - .:/app
+    restart: always
